@@ -48,3 +48,7 @@ The architectural hero is a lightweight CSS illustration, with no remote image o
 - Screenshot capture timed out and active browser use interrupted remaining interaction checks. Mobile visual layout and valid-form completion still need browser verification.
 
 - Brand update: approved English/Arabic artwork integrated and asset previews inspected on ivory, including the 32px favicon. Production build and lint rerun after integration.
+
+## Cloudflare Workers deployment
+
+This site is a Next.js static export. In Cloudflare Builds use `npm run build` as the build command and `npx wrangler deploy` as the deploy command. The checked-in `wrangler.jsonc` deploys `out/` as static assets. Do not use OpenNext or a server-rendered Next.js preset; no server bundle is needed. English and Arabic are served at `/en/` and `/ar/`.
